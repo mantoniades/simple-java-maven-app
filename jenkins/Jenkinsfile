@@ -18,12 +18,12 @@ pipeline {
         }
         stage('Deliver') {
             steps {
-                echo 'Job Complete!'
+                sh './jenkins/scripts/deliver.sh'
             }
         }
        stage('Complete') {
             steps {
-                sh './jenkins/scripts/deliver.sh'
+                echo 'Job Completed!'
             }
        }
     }
